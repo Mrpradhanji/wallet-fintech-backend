@@ -1,5 +1,9 @@
--- Create wallets table
-CREATE TABLE IF NOT EXISTS wallets (
+-- Drop existing tables if they exist
+DROP TABLE IF EXISTS ledger_transactions CASCADE;
+DROP TABLE IF EXISTS wallets CASCADE;
+
+-- Create wallets table with currency support
+CREATE TABLE wallets (
     id SERIAL PRIMARY KEY,
     user_id INTEGER NOT NULL REFERENCES users(id) ON DELETE CASCADE,
     balance DECIMAL(15, 2) NOT NULL DEFAULT 0.00,
