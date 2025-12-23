@@ -5,7 +5,7 @@ const db = require("./db")
 const routesCategories = require("./routes/categories");
 const routesUser = require("./routes/users");
 const routesFinances = require("./routes/finances");
-
+const routesTransfers = require("./routes/transfers");
 
 const app = express();
 app.use(cors({
@@ -14,16 +14,16 @@ app.use(cors({
 );
 app.use(express.json());
 
-const port = process.env.PORT;
-
+const port = 3000;
 
 app.get('/', (req, res) => {
   res.send('Olá, essa é a aplicação Wallet App')
 });
 
-app.use("/categories", routesCategories);
-app.use("/users", routesUser);
-app.use("/finances",routesFinances);
+app.use("/api/categories", routesCategories);
+app.use("/api/users", routesUser);
+app.use("/api/finances", routesFinances);
+app.use("/api/transfers", routesTransfers);
 
 app.get ("/categories", (req, res) => {
   db.query("SELECT * FROM categories", (error, response) => {
