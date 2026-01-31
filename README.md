@@ -1,6 +1,6 @@
 # Wallet Fintech Backend 🚀
 
-**Production-grade wallet backend for fintech payments** (Node.js + PostgreSQL + ACID transactions)
+**Production-grade wallet backend for fintech payments** (Node.js + PostgreSQL + Dockers + ACID transactions)
 
 [![Node.js](https://img.shields.io/badge/Node.js-v22-green)](https://nodejs.org)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue)](https://postgresql.org)
@@ -50,3 +50,4 @@ curl -X POST http://localhost:3000/api/transfers -H "Content-Type: application/j
 **[Railway.app Deployed URL]**
 
 **Built for Fintech Backend Roles** - Payments/Wallets/Ledger Systems
+
